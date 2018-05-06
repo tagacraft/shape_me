@@ -46,10 +46,14 @@ Scenario of the mod :
   the 3 mods stairs, moreblocks (for circular saw from stairsplus) and columnia.
   
   So, at load time :
+  ------------------
+  
     subnodes_registerer load files about mods to call and blocks to process;
     for each block to process, subnodes_registerer call each mod's :registerfunc(params).
 
   at run-time :
+  -------------
+  
     regarding to privileges granted, the player can :
     "user" player :
     - punch a node with the intended tool then subnodes_registerer calculates what can be done with this punched_thing,
