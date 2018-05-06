@@ -31,12 +31,15 @@ Scenario of the mod :
   - subnodes_registerer, at load time, load datas about mods to call, blocks to process and then call 
   the any_mod:registerfunc(params):
   this scenario implies subnodes_registerer/depends.txt file to contain a "any_mod?" line:
+  
       there is a circular reference we must work around.
       ==================================================
+      
       - any_mod don't call subnodes_registerer, but a coming soon mod 'subnodes_linker' which will perform
       populating data files for subnodes_registerer to know the existence of any_mod:registerfunc(params) and
       modifying subnodes_registerer/depends.txt file by adding a "any_mod?" line.
       - then the circular reference doesn't exist anymore and subnode_registerer can call any_mod's function.
+      
   For pre-existing mods that are written with no call to subnodes_linker, we must let an accredited player to do 
   this job in-game : making a link beetwen any_mod and subnodes_registerer.
   waiting for this step, the first release of subnodes_registerer will have a minimal data file containing links to
